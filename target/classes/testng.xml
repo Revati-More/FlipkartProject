@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Flipkart Test">
+  <test name="Test">
+    <classes>
+      <class name="com.flipkartProject.testClass.LoginPageTest"/>
+      <class name="com.flipkartProject.testClass.HomePageTest"/>
+	  <class name="com.flipkartProject.testClass.AppliancesPageTest"/>
+      <class name="com.flipkartProject.testClass.FashionPageTest"/>
+      <class name="com.flipkartProject.testClass.MobilePageTest"/>
+      <class name="com.flipkartProject.testClass.ProductOutOfStockPageTest"/>
+	  <class name="com.flipkartProject.testClass.ProductPageTest"/>
+      <class name="com.flipkartProject.testClass.RemoveItemFromCartPageTest"/>
+      <class name="com.flipkartProject.testClass.TravelPageTest"/>
+    </classes>
+  </test>
+</suite>
