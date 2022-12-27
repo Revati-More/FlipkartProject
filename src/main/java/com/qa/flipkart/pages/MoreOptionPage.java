@@ -12,6 +12,14 @@ import com.qa.flipkart.baseclass.BaseClass;
 
 public class MoreOptionPage extends BaseClass {
 	
+	@FindBy(xpath = "//*[@class='_2MlkI1']")
+	private WebElement loginWindow;
+	public boolean loginWindow() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		return loginWindow.isDisplayed();
+	}
+	
 	@FindBy(xpath = "//*[@class='_2KpZ6l _2doB4z']")
 	private WebElement closeTab;
 	public void closeTab() throws InterruptedException
@@ -59,7 +67,15 @@ public class MoreOptionPage extends BaseClass {
 	
 		for(int i=1;i<listOfMsg.size();i++)
 		{
-			System.out.println(listOfMsg.get(i).isDisplayed());
+			if(listOfMsg.get(i).getAttribute("class").equals("_3bBK6b"))
+			{
+				System.out.println(listOfMsg.get(i).isDisplayed());
+			}
+			else
+			{
+				System.out.println(listOfMsg.get(i) + " Element not present");
+			}
+			
 		}
 		Thread.sleep(5000);
 	}

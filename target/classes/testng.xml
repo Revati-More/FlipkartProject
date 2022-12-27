@@ -8,6 +8,8 @@
 	  <class name="com.flipkartProject.testClass.AppliancesPageTest"/>
       <class name="com.flipkartProject.testClass.FashionPageTest"/>
       <class name="com.flipkartProject.testClass.MobilePageTest"/>
+	  <class name="com.flipkartProject.testClass.MoreOptionPageTest"/>
+      <class name="com.flipkartProject.testClass.ProfileDetailsPageTest"/>
       <class name="com.flipkartProject.testClass.ProductOutOfStockPageTest"/>
 	  <class name="com.flipkartProject.testClass.ProductPageTest"/>
       <class name="com.flipkartProject.testClass.RemoveItemFromCartPageTest"/>

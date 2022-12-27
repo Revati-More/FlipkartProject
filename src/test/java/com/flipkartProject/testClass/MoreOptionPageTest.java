@@ -32,6 +32,7 @@ public class MoreOptionPageTest extends BaseClass
 		public void fashionValidation() throws InterruptedException
 		{	
 			moreOptionPageObject = new MoreOptionPage();
+			Assert.assertTrue(moreOptionPageObject.loginWindow());
 			moreOptionPageObject.closeTab();
 			moreOptionPageObject.moreOption();
 			moreOptionPageObject.customerCare();

@@ -1,5 +1,10 @@
 package com.qa.flipkart.baseclass;
 
+import org.apache.log4j.Appender;
+import org.apache.log4j.ConsoleAppender;
+import org.apache.log4j.Layout;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PatternLayout;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -13,9 +18,15 @@ public class BaseClass
 {
 	public static WebDriver driver;
 	public static Properties prop;
-
+	
+	private static Logger log = Logger.getLogger(BaseClass.class);
+	
 	public BaseClass()
 	{
+		Layout layout = new PatternLayout("%C - %M - %m - %n");
+		Appender app = new ConsoleAppender(layout);
+		log.addAppender(app);
+		
 		try {
 			prop = new Properties();
 			
@@ -37,6 +48,11 @@ public class BaseClass
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		
-		driver.get(prop.getProperty("url"));	
+		log.info("Launching browser");
+		driver.get(prop.getProperty("url"));
+		log.warn("Flipkart URL has been launched");
+		
+		String title = driver.getTitle();
+		log.error("Title is " + title);
 	}
 }
